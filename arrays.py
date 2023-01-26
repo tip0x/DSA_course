@@ -16,7 +16,7 @@ for n in new_list:
 
 numbers = []
 len(numbers)
-number.insert(1, 2)
+numbers.insert(1, 2)
     #appending adds the item at the end of the list which has a constant time
 
 numbers = []

@@ -104,3 +104,13 @@ runs the python repl (Re-evaluate
 print loop) in the console to load the content of our file into it for use.
 
 A data is prepend when added to the head of a list, and append when added to the tail, a true insert is when you can insert the data at any point in the list.
+
+command line {
+l = LinkedList()
+l.add(n)
+l.size()
+n = l.search(n)
+l (for list of all data)
+}
+
+# The Merge Sort Algorithm

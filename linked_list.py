@@ -45,6 +45,43 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
+    def search(self, key):
+        """
+        Search for the first node containing data that matches the key
+        Return the node or 'None' if not found
+        """
+
+        current = self.head
+        while current:
+            if current.data == key:
+                return current
+            else:
+                current = current.next_node
+        return 'Not Found'
+
+    def remove(self, key):
+        """
+        Removes node containing data that matches the key
+        Returns the node or None if key doesn't exist
+        Takes O(n) time
+        """
+        current = self.head
+        previous = None
+        found = False
+
+        while current and not found:
+            if current.data == key and current is self.head:
+                found = True
+                self.head = current.next_node 
+            elif current.data == key:
+                found = True
+                previous.next_node = current.next_node
+            else:
+                previous = current
+                current = current.next_node
+        return current
+
+
     def __repr__(self):
         """
         Returns a string representation of the list
